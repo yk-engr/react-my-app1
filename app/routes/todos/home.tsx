@@ -7,6 +7,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <div>ホーム</div>;
+export default function TodosHome() {
+  return <div>Todoの一覧</div>;
 }

@@ -1,4 +1,4 @@
-import type { Route } from "./+types/home";
+import type { Route } from "./+types/detail";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -7,6 +7,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <div>ホーム</div>;
+export default function TodosDetail() {
+  return <div>Todoの詳細</div>;
 }
+  

@@ -2,6 +2,7 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -43,7 +44,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <div>ルートのレイアウト</div>
+      <Outlet />
+      <MyAppNav />
+    </>
+  );
+}
+
+export function MyAppNav() {
+  return (
+    <nav>
+      <NavLink to="/" end>ホーム</NavLink>
+      <NavLink to="/about" end>About</NavLink>
+      <NavLink to="/profile" end>プロフィール</NavLink>
+    </nav>
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
